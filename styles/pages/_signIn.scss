@@ -1,0 +1,38 @@
+.auth {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 4rem;
+    &__img {
+        height: 100%;
+        width: 100%;
+        position: relative;
+    }
+    &__backgroundImg {
+        display: block;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    &__twitterLogo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 30%;
+        width: auto;
+        transform: translate(-50%, -50%);
+    }
+    &__mainContent {
+        &-logo {
+            height: 3rem;
+            width: auto;
+        }
+    }
+    &__footer {
+        grid-column: 1/-1;
+        background-color: green;
+    }
+}
+.auth_mainContent {
+}
