@@ -1,9 +1,11 @@
 import React from 'react'
-import Image from 'next/image'
+import { BsApple } from 'react-icons/bs'
+
 import WideCurvedButton from '../components/wide_curved_button'
 import twitterImg from '../assets/img//png/twitterBackground.png'
 import twitterLogo from '../assets/img//png/twitter-logo-white.png'
 import twitterLogoBlue from '../assets/img//png/twitter-logo-blue.png'
+
 const AuthenticationPage = (props: { signIn?: boolean }) => {
     return (
         <div className='auth'>
@@ -28,11 +30,30 @@ const AuthenticationPage = (props: { signIn?: boolean }) => {
                     alt='twitter logo'
                     className='auth__mainContent-logo'
                 />
-                <WideCurvedButton>
+                <h1 className='heading1 heading1-bold'>Happening now</h1>
+                <h2 className='heading2 heading1-bold'>
                     {props.signIn
-                        ? 'sign in with google'
-                        : 'sign Up with google'}
-                </WideCurvedButton>
+                        ? 'Sign in to Twitter'
+                        : 'Join Twitter today.'}
+                </h2>
+                <div className='auth__buttons'>
+                    <WideCurvedButton onChange={() => {}}>
+                        {props.signIn
+                            ? 'sign in with google'
+                            : 'sign Up with google'}
+                    </WideCurvedButton>
+                    <WideCurvedButton onChange={() => {}}>
+                        <BsApple />
+                        {props.signIn
+                            ? ' sign in with apple'
+                            : ' sign Up with apple'}
+                    </WideCurvedButton>
+                    <WideCurvedButton onChange={() => {}}>
+                        {props.signIn
+                            ? 'sign in with google'
+                            : 'use phone or email'}
+                    </WideCurvedButton>
+                </div>
             </section>
             <footer className='auth__footer'></footer>
         </div>

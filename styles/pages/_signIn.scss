@@ -23,16 +23,25 @@
         width: auto;
         transform: translate(-50%, -50%);
     }
+
     &__mainContent {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        padding: 5rem;
         &-logo {
             height: 3rem;
             width: auto;
         }
     }
+    &__buttons {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+    }
     &__footer {
         grid-column: 1/-1;
         background-color: green;
     }
-}
-.auth_mainContent {
 }
