@@ -1,0 +1,41 @@
+@mixin bold {
+    font-weight: bold;
+}
+
+.capital {
+    text-transform: capitalize;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+.heading1 {
+    font-size: 7rem;
+
+    &-bold {
+        @include bold();
+    }
+}
+.heading2 {
+    font-size: 4rem;
+    &-bold {
+        @include bold();
+    }
+}
+.heading3 {
+    font-size: 3rem;
+    &-bold {
+        @include bold();
+    }
+}
+.heading4 {
+    font-size: 2rem;
+    &-bold {
+        @include bold();
+    }
+}
+.heading5 {
+    font-size: 1.5rem;
+    &-bold {
+        @include bold();
+    }
+}
