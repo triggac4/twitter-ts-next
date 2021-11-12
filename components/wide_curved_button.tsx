@@ -1,13 +1,18 @@
 import React from 'react'
+import { children } from '../variable_types'
 
-type child = JSX.Element | string
-const WideCurvedButton = (props: { children: any; onChange(): void }) => {
+type wideButtonProps = {
+    children: children
+    onChange(): void
+}
+const WideCurvedButton = (props: wideButtonProps) => {
+    let { children, onChange } = props
     return (
         <button
             className='wideCurvedButton heading5 heading5-bold'
-            onChange={props.onChange}
+            onChange={onChange}
         >
-            {props.children}
+            {children}
         </button>
     )
 }

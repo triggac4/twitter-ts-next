@@ -1,3 +1,4 @@
+/* eslint-disable react/no-children-prop */
 import React from 'react'
 import { BsApple } from 'react-icons/bs'
 
@@ -5,8 +6,36 @@ import WideCurvedButton from '../components/wide_curved_button'
 import twitterImg from '../assets/img//png/twitterBackground.png'
 import twitterLogo from '../assets/img//png/twitter-logo-white.png'
 import twitterLogoBlue from '../assets/img//png/twitter-logo-blue.png'
+import FooterLink from '../components/links'
 
 const AuthenticationPage = (props: { signIn?: boolean }) => {
+    let arbitraryLinks = [
+        'about',
+        'help center',
+        'terms of service',
+        'privacy policy',
+        'cookie policy',
+        'ads info',
+        'blogs',
+        'status',
+        'careers',
+        'brand resources',
+        'advertising ',
+        'businesses',
+        'marketing',
+        'developers',
+        'directory',
+        'setting',
+    ]
+
+    let footerLinks = arbitraryLinks.map((link, index) => {
+        return (
+            <FooterLink href={link} key={index} className='auth__footer-link'>
+                {link}
+            </FooterLink>
+        )
+    })
+
     return (
         <div className='auth'>
             <div className='auth__img'>
@@ -53,9 +82,37 @@ const AuthenticationPage = (props: { signIn?: boolean }) => {
                             ? 'sign in with google'
                             : 'use phone or email'}
                     </WideCurvedButton>
+                    <p className='auth__mainContent-terms'>
+                        By signing up, you agree to the{' '}
+                        <FooterLink
+                            href='#'
+                            className='auth__mainContent-link '
+                            children='Terms of Service'
+                        />
+                        and
+                        <FooterLink
+                            href='#'
+                            className=' auth__mainContent-link '
+                            children='Privacy Policy'
+                        />
+                        , including
+                        <FooterLink
+                            href='#'
+                            className='auth__mainContent-link'
+                            children='Terms of Service.'
+                        />
+                    </p>
+                    <p className='auth__mainContent-switch p-t-medium'>
+                        Already have an account?
+                        <FooterLink
+                            href='#'
+                            className='auth__mainContent-link'
+                            children='sign in'
+                        />
+                    </p>
                 </div>
             </section>
-            <footer className='auth__footer'></footer>
+            <footer className='auth__footer'>{footerLinks}</footer>
         </div>
     )
 }

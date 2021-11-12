@@ -4,13 +4,13 @@
     height: 3.5rem;
     padding: 5px auto;
     border-radius: 3rem;
-    background-color: $white;
-    border: 1px solid $grey;
+    background-color: $color-white;
+    border: 1px solid $color-grey;
     text-align: center;
     display: block;
     text-transform: uppercase;
 
     &:hover {
-        background-color: $grey-light;
+        background-color: $color-grey-light;
     }
 }
