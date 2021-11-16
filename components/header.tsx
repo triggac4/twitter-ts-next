@@ -6,7 +6,7 @@ type headerProps = {
 }
 const Header = ({ title, suffix }: headerProps) => {
     return (
-        <div className='header'>
+        <div className='header p-medium'>
             <div className='header__title'>{title}</div>
             <div className='header__suffix'>{suffix}</div>
         </div>

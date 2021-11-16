@@ -1,20 +1,25 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react'
-
-const Tweet = ({ tweet }) => {
+import { children } from '../variable_types'
+type tweetProps = {
+    avatar: string
+    children: children
+    align?: boolean
+}
+const Tweet = ({ avatar, children, align }: tweetProps) => {
     return (
-        <div className='tweet'>
-            <img className='tweet__avatar' src={tweet.avatar} alt='' />
-            <div className='tweet__body'>
-                <div className='tweet__body__header'>
-                    <span className='tweet__body__header__name'>
-                        {tweet.name}
-                    </span>
-                    <span className='tweet__body__header__username'>
-                        @{tweet.username}
-                    </span>
-                </div>
-                <p className='tweet__body__content'>{tweet.content}</p>
-            </div>
+        <div
+            className='tweet p-x-medium p-t-medium'
+            style={align ? { alignItems: 'center' } : {}}
+        >
+            <figure className='tweet__avatar'>
+                <img
+                    className='tweet__avatar--image'
+                    src={avatar}
+                    alt='avatar'
+                />
+            </figure>
+            {children}
         </div>
     )
 }

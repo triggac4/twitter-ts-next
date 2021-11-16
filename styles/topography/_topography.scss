@@ -63,3 +63,9 @@
         font-weight: 400;
     }
 }
+
+.new-tweet__textfield {
+    &::placeholder {
+        font-size: 1.7rem;
+    }
+}
