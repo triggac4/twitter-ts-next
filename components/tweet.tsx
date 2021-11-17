@@ -1,12 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import { children } from '../variable_types'
-type tweetProps = {
+
+export type tweetProps = {
     avatar: string
     children: children
     align?: boolean
 }
-const Tweet = ({ avatar, children, align }: tweetProps) => {
+const Tweet: React.FC<tweetProps> = ({ avatar, children, align }) => {
     return (
         <div
             className='tweet p-x-medium p-t-medium'

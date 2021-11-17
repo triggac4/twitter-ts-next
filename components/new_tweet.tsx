@@ -6,8 +6,10 @@ import {
     AiFillSchedule,
 } from 'react-icons/ai'
 
+import MultipleTweetContainer from './multiple_tweet_container'
 import { GrEmoji } from 'react-icons/gr'
 import { BiWorld } from 'react-icons/bi'
+import Header from './header'
 import Tweet from './tweet'
 import avatar from '../assets/img/jpg/profile-pic.jpg'
 
@@ -45,7 +47,11 @@ const NewTweet = ({ onChange }: newTweetProps) => {
                     <button className='new-tweet__button'>Tweet</button>
                 </div>
             </Tweet>
+            <MultipleTweetContainer>
+                <Header title='Home' />
+            </MultipleTweetContainer>
         </div>
     )
 }
+
 export default NewTweet
