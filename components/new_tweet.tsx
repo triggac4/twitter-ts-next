@@ -6,17 +6,16 @@ import {
     AiFillSchedule,
 } from 'react-icons/ai'
 
-import MultipleTweetContainer from './multiple_tweet_container'
 import { GrEmoji } from 'react-icons/gr'
 import { BiWorld } from 'react-icons/bi'
-import Header from './header'
 import Tweet from './tweet'
 import avatar from '../assets/img/jpg/profile-pic.jpg'
 
 type newTweetProps = {
     onChange: (event: React.ChangeEvent<HTMLInputElement>) => void
+    className?: string
 }
-const NewTweet = ({ onChange }: newTweetProps) => {
+const NewTweet: React.FC<newTweetProps> = ({ onChange, className }) => {
     let IconList = [
         <RiGalleryFill key={0} style={{ fontSize: '2rem' }} />,
         <AiOutlineFileGif key={1} style={{ fontSize: '2rem' }} />,
@@ -31,8 +30,8 @@ const NewTweet = ({ onChange }: newTweetProps) => {
         )
     })
     return (
-        <div className='new-tweet'>
-            <Tweet avatar={avatar.src} align>
+        <div className={'new-tweet ' + className}>
+            <Tweet avatar={avatar.src} isAlign>
                 <input
                     type='text'
                     className='new-tweet__textfield'
@@ -47,9 +46,6 @@ const NewTweet = ({ onChange }: newTweetProps) => {
                     <button className='new-tweet__button'>Tweet</button>
                 </div>
             </Tweet>
-            <MultipleTweetContainer>
-                <Header title='Home' />
-            </MultipleTweetContainer>
         </div>
     )
 }

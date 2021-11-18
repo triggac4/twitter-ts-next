@@ -1,5 +1,5 @@
 @mixin bold {
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .capital {
@@ -10,6 +10,7 @@
 }
 .heading1 {
     font-size: 7rem;
+    font-weight: 400;
 
     &-bold {
         @include bold();
@@ -17,24 +18,28 @@
 }
 .heading2 {
     font-size: 4rem;
+    font-weight: 400;
     &-bold {
         @include bold();
     }
 }
 .heading3 {
     font-size: 3rem;
+    font-weight: 400;
     &-bold {
         @include bold();
     }
 }
 .heading4 {
     font-size: 2rem;
+    font-weight: 400;
     &-bold {
         @include bold();
     }
 }
 .heading5 {
     font-size: 1.5rem;
+    font-weight: 400;
     &-bold {
         @include bold();
     }
@@ -67,5 +72,12 @@
 .new-tweet__textfield {
     &::placeholder {
         font-size: 1.7rem;
+    }
+}
+
+.tweet-post {
+    &__username {
+        font-size: 1.2rem;
+        font-weight: 400;
     }
 }
