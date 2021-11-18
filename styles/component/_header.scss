@@ -1,0 +1,12 @@
+.header {
+    border-bottom: 1px solid $color-grey-light;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__title {
+        span {
+            color: $color-grey;
+        }
+    }
+}

@@ -1,0 +1,63 @@
+.auth {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 4rem;
+
+    &__img {
+        height: 100%;
+        width: 100%;
+        position: relative;
+    }
+    &__backgroundImg {
+        display: block;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    &__twitterLogo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 30%;
+        width: auto;
+        transform: translate(-50%, -50%);
+    }
+
+    &__mainContent {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        padding: 5rem;
+        &-logo {
+            height: 3rem;
+            width: auto;
+        }
+        &-link {
+            color: $color-primary;
+            margin: 0 0.5rem;
+        }
+        p {
+            overflow-wrap: break-word;
+        }
+    }
+    &__buttons {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+    &__footer {
+        grid-column: 1/-1;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+        &-link {
+            color: $color-grey;
+        }
+    }
+}

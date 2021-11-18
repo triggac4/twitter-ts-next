@@ -1,0 +1,71 @@
+@mixin bold {
+    font-weight: bold;
+}
+
+.capital {
+    text-transform: capitalize;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+.heading1 {
+    font-size: 7rem;
+
+    &-bold {
+        @include bold();
+    }
+}
+.heading2 {
+    font-size: 4rem;
+    &-bold {
+        @include bold();
+    }
+}
+.heading3 {
+    font-size: 3rem;
+    &-bold {
+        @include bold();
+    }
+}
+.heading4 {
+    font-size: 2rem;
+    &-bold {
+        @include bold();
+    }
+}
+.heading5 {
+    font-size: 1.5rem;
+    &-bold {
+        @include bold();
+    }
+}
+.auth__footer-link {
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+}
+.auth__mainContent {
+    &-terms {
+        text-transform: capitalize;
+        font-size: 1.2rem;
+    }
+    &-switch {
+        text-transform: capitalize;
+    }
+}
+
+.header__title {
+    font-size: 2.2rem;
+    font-weight: 600;
+
+    span {
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+}
+
+.new-tweet__textfield {
+    &::placeholder {
+        font-size: 1.7rem;
+    }
+}

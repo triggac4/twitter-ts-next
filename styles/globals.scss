@@ -1,16 +1,34 @@
-html,
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    line-height: 1.2;
+    font-size: 1.5rem;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    text-decoration: none;
+    color: currentColor;
 }
 
-* {
-  box-sizing: border-box;
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+    font-size: inherit;
 }
+@import './variables/variables';
+@import './utility/utilities';
+@import './topography/topography';
+@import './component/wide_curved_button';
+@import './component/footer_link';
+@import './component/header';
+@import './component/tweet';
+@import './pages/auth';
+@import './pages/layout';
