@@ -2,11 +2,11 @@
 import React from 'react'
 import { BsApple } from 'react-icons/bs'
 
-import WideCurvedButton from '../components/wide_curved_button'
-import twitterImg from '../assets/img//png/twitterBackground.png'
-import twitterLogo from '../assets/img//png/twitter-logo-white.png'
-import twitterLogoBlue from '../assets/img//png/twitter-logo-blue.png'
-import FooterLink from '../components/links'
+import WideCurvedButton from '@components/wide_curved_button'
+import twitterImg from '@assets/img//png/twitterBackground.png'
+import twitterLogo from '@assets/img//png/twitter-logo-white.png'
+import twitterLogoBlue from '@assets/img//png/twitter-logo-blue.png'
+import FooterLink from '@components/links'
 
 const AuthenticationPage = (props: { signIn?: boolean }) => {
     let arbitraryLinks = [

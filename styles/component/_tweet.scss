@@ -4,19 +4,33 @@
     align-items: flex-start;
     grid-template-columns: min-content 1fr;
     column-gap: 1.5rem;
-    border-bottom: 1px solid $color-grey-light;
-    &__avatar {
+    row-gap: 1.5rem;
+    &__avatar-separator {
         grid-row: 1 / span 3;
+        align-self: flex-start;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    &__avatar {
         width: 4rem;
         height: 4rem;
         object-fit: cover;
         object-position: center;
-        align-self: flex-start;
         &--image {
             width: 100%;
             height: 100%;
             border-radius: 50%;
         }
+    }
+    &__separator {
+        width: 2px;
+        height: 100%;
+        background-color: $color-grey-light;
+        justify-self: stretch;
     }
     &__body {
         grid-column: 2;
@@ -24,10 +38,13 @@
         width: 100%;
     }
 }
-// End component
-//New Tweet component
+//////////////////////////////////
+///////////////////// End component
 
+////////////////////////////////////
+//////////////////New Tweet component
 .new-tweet {
+    border-bottom: 1px solid $color-grey-light;
     &__textfield {
         border: none;
         outline: none;
@@ -82,4 +99,28 @@
         font-weight: 600;
         border-radius: 3rem;
     }
+}
+//////////////////////////////////
+///////////////////// End component
+
+////////////////////////////////////
+//////////////////Tweet Post component
+.tweet-post {
+    &__username {
+        color: $color-grey;
+        margin-left: 0.5rem;
+    }
+    &__content {
+    }
+}
+//////////////////////////////////
+///////////////////// End component
+
+//////////////////////////////////
+//////////Multiple Tweet component
+
+.multiple-tweet {
+    display: flex;
+    border-bottom: 1px solid $color-grey-light;
+    flex-direction: column;
 }
