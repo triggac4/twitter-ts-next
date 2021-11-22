@@ -1,6 +1,5 @@
 import React from 'react'
 import { children } from '../variable_types'
-import MultipleTweetContainer from './multiple_tweet_container'
 
 type LinksProps = {
     href: string

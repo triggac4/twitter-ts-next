@@ -135,11 +135,3 @@
 //     }
 // }
 // console.log('maxprof', maxProfit([...v3]))
-
-function Max(a, b) {
-    if (!a || !b) {
-        return a ? a : b
-    }
-    return a > b ? a : b
-}
-console.log(Max(NaN, 5))

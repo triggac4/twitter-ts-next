@@ -110,7 +110,87 @@
         color: $color-grey;
         margin-left: 0.5rem;
     }
-    &__content {
+}
+//////////////////////////////////
+///////////////////// End component
+
+//////////////////////////////////
+//////////Tweet Post footer component
+
+.tweet-post-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .defaultColor {
+        &:active {
+            color: $color-primary;
+        }
+        &:hover {
+            color: $color-primary;
+        }
+    }
+    .defaultColor-light {
+        &:active {
+            background-color: $color-primary-light2;
+        }
+        &:hover {
+            background-color: $color-primary-light2;
+        }
+    }
+
+    .redColor {
+        &:active {
+            color: $color-red;
+        }
+        &:hover {
+            color: $color-red;
+        }
+    }
+    .redColor-light {
+        &:active {
+            background-color: $color-red-light;
+        }
+        &:hover {
+            background-color: $color-red-light;
+        }
+    }
+    .greenColor {
+        &:active {
+            color: $color-green;
+        }
+        &:hover {
+            color: $color-green;
+        }
+    }
+    .greenColor-light {
+        &:active {
+            background-color: $color-green-light;
+        }
+        &:hover {
+            background-color: $color-green-light;
+        }
+    }
+
+    &__button {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    &__icon {
+        border: none;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: currentColor;
+        background-color: transparent;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
     }
 }
 //////////////////////////////////

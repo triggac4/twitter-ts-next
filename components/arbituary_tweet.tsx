@@ -1,6 +1,7 @@
 import React from 'react'
 import Tweet from './tweet'
 import avatar from '../assets/img/jpg/profile-pic.jpg'
+import TweetPostFooter from './tweet_post_footer'
 
 const ArbitraryTweet = (props: any) => {
     return (
@@ -16,6 +17,16 @@ const ArbitraryTweet = (props: any) => {
                     officia accusamus obcaecati excepturi eligendi recusandae
                     eaque? Debitis ad vel eos. Reprehenderit, tenetur!
                 </div>
+                <TweetPostFooter
+                    messages={6}
+                    retweets={2}
+                    likes={3}
+                    onClickLike={() => {}}
+                    onClickRetweet={() => {}}
+                    onClickMessage={() => {}}
+                    onClickShare={() => {}}
+                    isLiked={false}
+                />
             </div>
         </Tweet>
     )
