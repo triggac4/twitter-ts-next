@@ -6,6 +6,6 @@ import React from 'react'
 //IoIosMore
 
 const MultipleTweetContainer: React.FC = ({ children }) => {
-    return <div className='multiple-tweet p-y-medium'>{children}</div>
+    return <div className='multiple-tweet p-medium'>{children}</div>
 }
 export default MultipleTweetContainer

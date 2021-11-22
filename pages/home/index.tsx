@@ -7,7 +7,7 @@ import ArbitraryTweet from '@components/arbituary_tweet'
 const Home = () => {
     return (
         <Layout>
-            <div className='home p-x-medium'>
+            <div className='home '>
                 <Header title='Home' />
                 <NewTweet onChange={() => {}} className='p-t-medium' />
                 <MultipleTweetContainer>

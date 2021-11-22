@@ -9,7 +9,6 @@
         grid-row: 1 / span 3;
         align-self: flex-start;
         height: 100%;
-
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -203,4 +202,8 @@
     display: flex;
     border-bottom: 1px solid $color-grey-light;
     flex-direction: column;
+
+    &:hover {
+        background-color: $color-grey-light;
+    }
 }

@@ -30,7 +30,7 @@ const NewTweet: React.FC<newTweetProps> = ({ onChange, className }) => {
         )
     })
     return (
-        <div className={'new-tweet ' + className}>
+        <div className={'new-tweet p-x-medium ' + className}>
             <Tweet avatar={avatar.src} isAlign>
                 <input
                     type='text'
