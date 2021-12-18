@@ -23,12 +23,13 @@ a {
     margin: 0;
     font-size: inherit;
 }
-@import './variables/variables';
-@import './utility/utilities';
-@import './topography/topography';
-@import './component/wide_curved_button';
-@import './component/footer_link';
-@import './component/header';
-@import './component/tweet';
-@import './pages/auth';
-@import './pages/layout';
+@import "./variables/variables";
+@import "./utility/utilities";
+@import "./topography/topography";
+@import "./component/wide_curved_button";
+@import "./component/footer_link";
+@import "./component/search-bar";
+@import "./component/header";
+@import "./component/tweet";
+@import "./pages/auth";
+@import "./pages/layout";
