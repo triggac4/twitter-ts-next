@@ -69,3 +69,13 @@
         font-size: 1.7rem;
     }
 }
+
+.trend {
+    &__topic,
+    &__count {
+        font-size: 1.4rem;
+    }
+    &__title {
+        font-weight: bold;
+    }
+}

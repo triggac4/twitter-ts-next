@@ -1,16 +1,14 @@
-import React from 'react'
-import Header from '../../components/header'
-import Layout from '../../hoc/layout'
-import NewTweet from '../../components/new_tweet'
+import React from "react";
+import Layout from "../../hoc/layout";
+import NewTweet from "../../components/new_tweet";
 const Home = () => {
     return (
         <Layout>
-            <div className='home'>
-                <Header title='Home' />
+            <div className="home">
                 <NewTweet onChange={() => {}} />
             </div>
         </Layout>
-    )
-}
+    );
+};
 
-export default Home
+export default Home;

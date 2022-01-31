@@ -1,32 +1,64 @@
 .layout {
-    width: 100vw;
+    width: 100%;
     display: grid;
     grid-template-columns:
-        minmax(5rem, 1fr)
+        minmax(4rem, 1fr)
         [content-start sidebar-start] repeat(4, 1fr)
         [sidebar-end main-start] repeat(9, 1fr) [main-end search-start]
         repeat(5, 1fr)
         [search-end content-end]
-        minmax(5rem, 1fr);
-    grid-template-rows: 100vh;
+        minmax(4rem, 1fr);
+    grid-template-rows: 5rem 1fr;
 
     position: relative;
-    overflow-y: scroll;
+
     &__sidebar {
-        grid-column: sidebar-start / sidebar-end;
         position: sticky;
         top: 0;
+        grid-column: sidebar-start / sidebar-end;
+        grid-row: 1/-1;
         height: 100vh;
     }
     &__main {
+        grid-row: 2/3;
         grid-column: main-start / main-end;
         height: 400vh;
         border: 1px solid $color-grey-light;
     }
-    &__search {
-        grid-column: search-start / search-end;
-        height: 100vh;
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         position: sticky;
         top: 0;
+        grid-column: main-start / content-end;
+        grid-row: 1/2;
+        z-index: 10;
+        background-color: $color-white;
+    }
+    &__search {
+        overflow-y: auto;
+        grid-column: search-start / search-end;
+        height: 100vh;
+        position: relative;
+        /* width */
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: $color-grey-light;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: $color-grey-light-dark;
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: $color-grey;
+        }
     }
 }
