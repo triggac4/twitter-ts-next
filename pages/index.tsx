@@ -127,5 +127,4 @@ const AuthenticationPage = (props: { signIn?: boolean }) => {
     );
 };
 export default AuthenticationPage;
-
 //server call to get a props for the component

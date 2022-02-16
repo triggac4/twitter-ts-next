@@ -1,18 +1,18 @@
-import React from 'react'
-import { children } from '../variable_types'
-import MultipleTweetContainer from './multiple_tweet_container'
+import React from "react";
+import { children } from "../variable_types";
+import MultipleTweetContainer from "./multiple_tweet_container";
 
 type LinksProps = {
-    href: string
-    children: children
-    className: string
-}
+    href: string;
+    children: children;
+    className: string;
+};
 const Link = (props: LinksProps) => {
-    let { href, children, className } = props
+    let { href, children, className } = props;
     return (
         <a href={href} className={className}>
             {children}
         </a>
-    )
-}
-export default Link
+    );
+};
+export default Link;

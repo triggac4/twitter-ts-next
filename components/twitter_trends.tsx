@@ -45,7 +45,7 @@ const Trends = () => {
     return (
         <div className="trends">
             <div className="trends__header heading4">
-                bla bla <FiSettings />
+                Trends for you <FiSettings />
             </div>
             <div className="trends__body">{dataJsx}</div>
         </div>
