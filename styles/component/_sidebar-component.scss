@@ -1,0 +1,27 @@
+.sidebar {
+    &-component {
+        display: inline-grid;
+        grid-template-columns: 3rem max-content;
+        gap: 1rem;
+        height: 5rem;
+        justify-items: flex-start;
+        align-items: center;
+        padding: 1rem 1.5rem;
+        border-radius: 5rem;
+        cursor: pointer;
+        &:hover {
+            background-color: rgba($color-black, 0.3);
+        }
+    }
+    &-icon {
+        justify-self: center !important;
+        height: 100% !important;
+        width: 100% !important;
+        display: block !important;
+    }
+    &-title {
+        font-size: 2rem;
+        text-transform: capitalize;
+        font-weight: 600;
+    }
+}
