@@ -51,6 +51,20 @@
         width: 100%;
     }
 }
+
+@mixin tweetButtonHover {
+    background-color: currentColor;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    content: "";
+    border-radius: 50%;
+    display: block;
+}
+
 .blue {
     color: $color-grey;
     // color: $color-primary;
@@ -58,18 +72,10 @@
         color: $color-primary;
     }
     &:hover > .tweet-button__container::before {
-        background-color: currentColor;
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        opacity: 0.3;
-        content: "";
-        border-radius: 50%;
-        display: block;
+        @include tweetButtonHover;
     }
 }
+
 .green {
     color: $color-grey;
     //color: $color-retweet-green;
@@ -77,16 +83,7 @@
         color: $color-retweet-green;
     }
     &:hover > .tweet-button__container::before {
-        background-color: currentColor;
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        opacity: 0.3;
-        content: "";
-        border-radius: 50%;
-        display: block;
+        @include tweetButtonHover;
     }
 }
 .red {
@@ -96,16 +93,7 @@
         color: $color-like-red;
     }
     &:hover > .tweet-button__container::before {
-        background-color: currentColor;
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        opacity: 0.3;
-        content: "";
-        border-radius: 50%;
-        display: block;
+        @include tweetButtonHover;
     }
 }
 
